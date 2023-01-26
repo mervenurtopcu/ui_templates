@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:ui_templates/movie_ui.dart';
+import 'package:ui_templates/ui_templates/movie_templates/movie_ui.dart';
 
 void main() => runApp(const MyApp());
 

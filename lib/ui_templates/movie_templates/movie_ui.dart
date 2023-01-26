@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ui_templates/store_Ui.dart';
-import 'ui_templates/movie_templates/custom_widgets/enum_bottom_nav_bar.dart';
+import 'package:ui_templates/ui_templates/movie_templates/store_Ui.dart';
+
 
 class MovieUiTemplates extends StatefulWidget {
   const MovieUiTemplates({Key? key}) : super(key: key);

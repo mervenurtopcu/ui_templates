@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_templates/ui_templates/movie_templates/library_ui.dart';
 import 'package:ui_templates/ui_templates/movie_templates/store_Ui.dart';
 
 
@@ -30,9 +31,9 @@ class _MovieUiTemplatesState extends State<MovieUiTemplates> {
                 icon: Icon(Icons.storefront_rounded), label: 'Store'),
             BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
           ],
-          currentIndex: 3,
+          currentIndex: 1,
         ),
-        body: const StoreUi(),
+        body: const LibraryUi(),
       ),
     );
   }

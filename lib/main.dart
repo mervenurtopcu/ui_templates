@@ -19,14 +19,21 @@ class MyApp extends StatelessWidget {
             centerTitle: true,
             systemOverlayStyle: SystemUiOverlayStyle.dark),
         bottomNavigationBarTheme: BottomNavigationBarThemeData().copyWith(
-          elevation: 5,
-          selectedItemColor: Colors.pinkAccent,
-          unselectedItemColor: Colors.grey[350],
-          showSelectedLabels: true,
-          showUnselectedLabels: true
-          // selectedIconTheme: IconThemeData(
-          //   color: Colors.pinkAccent,
-          // ),
+            elevation: 5,
+            selectedItemColor: Colors.pinkAccent,
+            unselectedItemColor: Colors.grey[350],
+            showSelectedLabels: true,
+            showUnselectedLabels: true
+            // selectedIconTheme: IconThemeData(
+            //   color: Colors.pinkAccent,
+            // ),
+            ),
+        tabBarTheme: const TabBarTheme(
+          labelColor: Colors.pinkAccent,
+          labelStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+          unselectedLabelColor: Colors.grey,
+          unselectedLabelStyle: TextStyle(fontSize: 18),
+          indicatorSize: TabBarIndicatorSize.label,
         ),
       ),
       home: const Scaffold(

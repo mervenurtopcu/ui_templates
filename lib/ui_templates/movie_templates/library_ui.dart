@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ui_templates/ui_templates/movie_templates/custom_widgets/search_card.dart';
 
 class LibraryUi extends StatefulWidget {
   const LibraryUi({Key? key}) : super(key: key);
@@ -8,14 +7,11 @@ class LibraryUi extends StatefulWidget {
   State<LibraryUi> createState() => _LibraryUiState();
 }
 
-class _LibraryUiState extends State<LibraryUi> with TickerProviderStateMixin {
-  late final TabController _tabController;
-
+class _LibraryUiState extends State<LibraryUi> {
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    _tabController = TabController(length: _MyItems.values.length, vsync: this);
   }
 
   @override
@@ -58,7 +54,6 @@ class _General extends StatelessWidget {
       "Fiction",
       "Graphic Novels"
     ];
-    _CardColors color;
     return Scaffold(
       body: ListView.builder(
         itemBuilder: (context, index) {
@@ -96,6 +91,7 @@ class _General extends StatelessWidget {
     } else if (value == _CardColors.yellow.index) {
       return Colors.yellow;
     }
+    return null;
   }
 }
 
@@ -105,7 +101,7 @@ class _New extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-        itemBuilder: (context, index) => Placeholder(
+        itemBuilder: (context, index) => const Placeholder(
               color: Colors.pinkAccent,
             ));
   }

@@ -18,16 +18,12 @@ class MyApp extends StatelessWidget {
             elevation: 0,
             centerTitle: true,
             systemOverlayStyle: SystemUiOverlayStyle.dark),
-        bottomNavigationBarTheme: BottomNavigationBarThemeData().copyWith(
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData().copyWith(
             elevation: 5,
             selectedItemColor: Colors.pinkAccent,
             unselectedItemColor: Colors.grey[350],
             showSelectedLabels: true,
-            showUnselectedLabels: true
-            // selectedIconTheme: IconThemeData(
-            //   color: Colors.pinkAccent,
-            // ),
-            ),
+            showUnselectedLabels: true),
         tabBarTheme: const TabBarTheme(
           labelColor: Colors.pinkAccent,
           labelStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),

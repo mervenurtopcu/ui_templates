@@ -17,7 +17,7 @@ class _StoreUiState extends State<StoreUi> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      resizeToAvoidBottomInset: true,
+        resizeToAvoidBottomInset: true,
       body: Column(
         children: [
           SearchCard(),
@@ -51,98 +51,95 @@ class _StoreUiState extends State<StoreUi> {
                         margin: const EdgeInsets.only(
                           top: 10.0,
                         ),
-                        child: Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                movieList[index].movieName,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              movieList[index].movieName,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .headline5
+                                  ?.copyWith(
+                                      color: Colors.grey[600],
+                                      fontWeight: FontWeight.normal),
+                            ),
+                            Text(
+                              movieList[index].directorName,
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .subtitle1
+                                  ?.copyWith(color: Colors.grey),
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            RatingBarIndicator(
+                              rating: movieList[index].rate,
+                              itemCount: 5,
+                              itemSize: 15,
+                              itemBuilder: (context, _) => const Icon(
+                                Icons.star,
+                                color: Colors.pinkAccent,
+                              ),
+                            ),
+                            const SizedBox(
+                              height: 10,
+                            ),
+                            SizedBox(
+                              height: 25,
+                              width: 175,
+                              child: Text(
+                                movieList[index].description,
                                 style: Theme.of(context)
                                     .textTheme
-                                    .headline5
-                                    ?.copyWith(
-                                        color: Colors.grey[600],
-                                        fontWeight: FontWeight.normal),
+                                    .bodyText2
+                                    ?.copyWith(color: Colors.grey[400]),
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 1,
                               ),
-                              Text(
-                                movieList[index].directorName,
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .subtitle1
-                                    ?.copyWith(color: Colors.grey),
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              RatingBarIndicator(
-                                rating: movieList[index].rate,
-                                itemCount: 5,
-                                itemSize: 15,
-                                itemBuilder: (context, _) => const Icon(
-                                  Icons.star,
-                                  color: Colors.pinkAccent,
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              SizedBox(
-                                height: 25,
-                                width: 175,
-                                child: Text(
-                                  movieList[index].description,
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .bodyText2
-                                      ?.copyWith(color: Colors.grey[400]),
-                                  overflow: TextOverflow.ellipsis,
-                                  maxLines: 1,
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 20,
-                              ),
-                              Row(
-                                children: [
-                                  SizedBox(
-                                    width: 100,
-                                    height: 50,
-                                    child: ElevatedButton(
-                                      onPressed: () {},
-                                      style: ButtonStyle(
-                                        backgroundColor:
-                                            MaterialStateProperty.all<Color>(
-                                          Colors.pinkAccent,
-                                        ),
+                            ),
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            Row(
+                              children: [
+                                SizedBox(
+                                  width: 100,
+                                  height: 50,
+                                  child: ElevatedButton(
+                                    onPressed: () {},
+                                    style: ButtonStyle(
+                                      backgroundColor:
+                                          MaterialStateProperty.all<Color>(
+                                        Colors.pinkAccent,
                                       ),
-                                      child: const Text("Add to chart",
-                                          textAlign: TextAlign.center),
                                     ),
+                                    child: const Text("Add to chart",
+                                        textAlign: TextAlign.center),
                                   ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  SizedBox(
-                                    width: 100,
-                                    height: 50,
-                                    child: ElevatedButton(
-                                      onPressed: () {},
-                                      style: ButtonStyle(
-                                        backgroundColor:
-                                            MaterialStateProperty.all<Color>(
-                                                Colors.white),
-                                        elevation:
-                                            MaterialStateProperty.all(3.0),
-                                      ),
-                                      child: const Text("Add to wishlist",
-                                          style: TextStyle(color: Colors.black),
-                                          textAlign: TextAlign.center),
+                                ),
+                                const SizedBox(
+                                  width: 10,
+                                ),
+                                SizedBox(
+                                  width: 100,
+                                  height: 50,
+                                  child: ElevatedButton(
+                                    onPressed: () {},
+                                    style: ButtonStyle(
+                                      backgroundColor:
+                                          MaterialStateProperty.all<Color>(
+                                              Colors.white),
+                                      elevation: MaterialStateProperty.all(3.0),
                                     ),
+                                    child: const Text("Add to wishlist",
+                                        style: TextStyle(color: Colors.black),
+                                        textAlign: TextAlign.center),
                                   ),
-                                ],
-                              ),
-                            ],
-                          ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       ),
                     ],

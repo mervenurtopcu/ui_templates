@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:ui_templates/ui_templates/movie_templates/movie_ui.dart';
+import 'package:ui_templates/sheets/bottom_sheets/bottom_sheet_page.dart';
 
-import 'albums/albums_ui.dart';
 
 void main() => runApp(const MyApp());
 
@@ -35,7 +34,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: const Scaffold(
-        body: AlbumsUI(),
+        body: BottomSheetPage(),
       ),
     );
   }

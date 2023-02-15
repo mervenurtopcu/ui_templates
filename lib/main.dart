@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:ui_templates/sheets/alert_dialog/alert_dialog.dart';
 import 'package:ui_templates/sheets/bottom_sheets/bottom_sheet_page.dart';
 
 
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: const Scaffold(
-        body: BottomSheetPage(),
+        body: CustomAlertDialog(),
       ),
     );
   }
